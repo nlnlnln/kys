@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('Простой пример')),
+        appBar: AppBar(title: Text('l1')),
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Padding(
@@ -41,29 +41,26 @@ class MyApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Icon(Icons.star, color: Colors.amber, size: 40),
-                    Icon(Icons.favorite, color: Colors.red, size: 40),
-                    Icon(Icons.thumb_up, color: Colors.green, size: 40),
-                  ],
+                    Icon(Icons.favorite, color: Colors.red, size: 40),                  ],
                 ),
                 
                 SizedBox(height: 20),
                 
                 Container(
-                  width: 200,
-                  height: 100,
-                  margin: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.grey[300],
-                  ),
-                  child: Image.network(
-                    'https://i.pinimg.com/736x/3b/06/93/3b0693adafa2cf40ae70b052465d1460.jpg',
-                    fit: BoxFit.cover,
-                    errorBuilder: (context, error, stackTrace) {
-                      return Center(child: Text('Ошибка загрузки'));
-                    },
-                  ),
-                ),
+  width: 200,
+  height: 200,
+  decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(10),
+    color: Colors.grey[300],
+  ),
+  child: Image.network(
+    'https://avatars.mds.yandex.net/i?id=b2dce4256f2a2358900a4f217d182816_l-9461059-images-thumbs&ref=rim&n=13&w=1077&h=1077',
+    fit: BoxFit.cover,
+    errorBuilder: (context, error, stackTrace) {
+      return Center(child: Text('Ошибка: ${error.toString()}'));
+    },
+  ),
+),
                 
                 SizedBox(height: 20),
                 
@@ -71,7 +68,7 @@ class MyApp extends StatelessWidget {
                   radius: 40,
                   backgroundColor: Colors.purple,
                   child: Text(
-                    'AV',
+                    'ss',
                     style: TextStyle(
                       fontSize: 20,
                       color: Colors.white,
@@ -82,14 +79,13 @@ class MyApp extends StatelessWidget {
                 
                 SizedBox(height: 20),
                 
-                // Добавим еще элементов для прокрутки
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.green[100],
                     borderRadius: BorderRadius.circular(10),
                   ),
                   padding: EdgeInsets.all(15),
-                  child: Text('Дополнительный элемент'),
+                  child: Text('дополнительный элемент'),
                 ),
                 
                 SizedBox(height: 20),
@@ -100,7 +96,7 @@ class MyApp extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   padding: EdgeInsets.all(15),
-                  child: Text('Еще один элемент'),
+                  child: Text('еще один элемент'),
                 ),
               ],
             ),
